@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "https://www.youtube.com/upir_upir",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-attiny85", "id": "tiny", "top": -1.2, "left": -4, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 89.54,
+      "left": -28.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 35,
+      "left": 124.8,
+      "attrs": { "color": "green", "label": "LEFT", "key": "ArrowLeft" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 42.35,
+      "left": 201.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "oled1:SDA", "tiny:PB3", "gold", [ "v-28.8", "h-28.73", "v-9.6" ] ],
+    [ "oled1:SCL", "tiny:PB4", "orange", [ "v-38.4", "h0.3" ] ],
+    [ "oled1:VCC", "tiny:VCC", "red", [ "v-19.2", "h-38.25", "v-86.4" ] ],
+    [ "oled1:GND", "tiny:GND", "black", [ "v-9.6", "h38.4", "v-38.4" ] ],
+    [ "btn1:1.l", "tiny:PB0", "blue", [ "h-28.8", "v-57.6", "h-57.6", "v-9.6" ] ],
+    [ "btn1:2.l", "tiny:VCC", "red", [ "h-9.6", "v-105.4", "h-105.6" ] ],
+    [ "r1:1", "btn1:1.r", "black", [ "v0" ] ],
+    [ "r1:2", "tiny:GND", "black", [ "v-28.8", "h-193.2" ] ]
+  ],
+  "dependencies": {}
+}
