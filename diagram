@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "https://www.youtube.com/upir_upir",
+  "author": "https://www.youtube.com/@Shamim-Programmer/",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-attiny85", "id": "tiny", "top": -1.2, "left": -4, "attrs": {} },
